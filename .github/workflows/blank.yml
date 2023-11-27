@@ -27,7 +27,7 @@ jobs:
         - uses: actions/checkout@v3
       
         - name: Flyway Clean
-          run: C:\Program Files\Red Gate\Flyway Desktop\flyway> 
+          run: C:/Program Files/Red Gate/Flyway Desktop/flyway> 
                   -url=jdbc:postgresql://localhost:5432/postgres;encrypt=false;databaseName=${{ matrix.database }}_Build; 
                   -user=${{secrets.DB_USERNAME}} 
                   -password=${{secrets.DB_PASSWORD}}  
@@ -36,7 +36,7 @@ jobs:
           working-directory: ./${{ matrix.database }}/
       
         - name: Flyway Migrate
-          run: C:\Program Files\Red Gate\Flyway Desktop\flyway> 
+          run: C:/Program Files/Red Gate/Flyway Desktop/flyway> 
                   -url=jdbc:postgresql://localhost:5432/postgres;encrypt=false;databaseName=${{ matrix.database }}_Build; 
                   -user=${{secrets.DB_USERNAME}} 
                   -password=${{secrets.DB_PASSWORD}}   
